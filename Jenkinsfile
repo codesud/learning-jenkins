@@ -19,7 +19,7 @@ node {
             } 
         }
         else {
-            stage ('ELSE') {
+            stage ('Not Empty') {
                 print 'Else World'
             }
         }
