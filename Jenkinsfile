@@ -11,17 +11,13 @@ node {
     }
 }
 
-node {
-    stage('Example') {
-        if (env.BUILD_URL == "") {
-            stage ('EMPTY') {
-                print 'Empty World'
-            } 
-        }
-        else {
-            stage ('Not Empty') {
-                print 'Else World'
-            }
-        }
+if (env.BUILD_URL == "") {
+    stage ('EMPTY') {
+        print 'Empty World'
+    } 
+}
+else {
+    stage ('Not Empty') {
+        print 'Else World'
     }
 }
